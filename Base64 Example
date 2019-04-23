@@ -1,0 +1,12 @@
+// Simple Base64 with 'proper way to convert byte array to String (toString is questionable)
+
+
+    Base64.Decoder decoder = Base64.getDecoder();
+    byte[] bytes = decoder.decode(b64s);
+    String sOut = new String (bytes);
+        
+        
+ // to get a proper string
+ 
+    Base64.Encoder encoder = Base64.getEncoder();
+    String encodedString = new String(encoder.encode(c), StandardCharsets.ISO_8859_1));
